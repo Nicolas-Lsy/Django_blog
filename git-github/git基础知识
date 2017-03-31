@@ -53,8 +53,44 @@
 
 6.  版本的退回 
 
+   在通过之前方式，提交一个版本三： readme.txt ( Hello github and git !) 
+   $ git log                         (查看日志， 会看到所有的三个版本，和他们的描述信息 就是-m )
+   $ git log --pretty=oneline       （更加简洁的显示） 
+   
+   显示中：3628164fb26d48395383f8f31179f24e0882e1e0  类似的字符串 ，是git给版本定的ID  代表唯一版本，不用1，2，3是因为git是好多人一起工作，总会重复的。 
+   现在改变版本三 变为 版本一 ：
+   $ git reset --hard HEAD^                          （返回上一版本） （用HEAD表示当前版本）（用HEAD^表示上一版本）
+   $ git reset --hard HEAD^                          （返回了两次，到了版本一，若想返回n次用HEAD～n，新的版本会消失） 
+   $ git reflog                                      （查看你的每一次命令，找到最新版本的ID就能返回最新版本了） 
+   $ git reset --hard 3628164                        （只要写上ID的前几位就可以了）  
+   
+ 7.  撤销修改 和 删除文件 
+ 
+   如果添加的“修改过的文件”不想要了， 可以丢弃掉 
+   $ git status                       （先查看以下 ，添加到git中的东西）  
+   $ git checkout -- readme.txt       （把想丢弃的丢丢弃掉 ，readme.txt 的版本四） 
+   
+   场景1：
+       当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
 
-
+   场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，
+         分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。
+         
+   $ rm readme.txt               (删除了文件） 
+   
+   对于git你有两种操作可选择：
+   $ git rm test.txt             （真的要删除这个文件， 并且git中也删除了） 
+   $ git commit -m "remove test.txt"   （git是操作“修改文件的动作“ ，不是操作文件）  
+   
+   或者：
+   $ git checkout -- test.txt       （你删错文件了，把缓存区的操作丢弃） 
+   
+   
+   
+   
+   
+   
+ 
 
 
 
