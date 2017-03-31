@@ -1,0 +1,37 @@
+最好能掌握git的基本用法
+常用的内容用熟练了就不会忘记了，容易忘记的再来这里查看。
+
+
+1.git了解
+分布式版本控制系统。
+分布式版本控制系统没有“中央服务器”，每个人的电脑上都是一个完整的版本库，
+这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。
+既然每个人电脑上都有一个完整的版本库，那多个人如何协作呢？比方说你在自己电脑上改了文件A，
+你的同事也在他的电脑上改了文件A，这时，你们俩之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。
+
+
+2.git安装
+用Debian或Ubuntu Linux，通过一条sudo apt-get install git就可以直接完成Git的安装
+如果是其他Linux版本，可以直接通过源码安装。先从Git官网下载源码，然后解压，
+依次输入：./config，make，sudo make install这几个命令安装就好了。
+msysgit是Windows版的Git，从https://git-for-windows.github.io下载然后按默认选项安装即可。
+--设置
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+
+3. git仓库创建
+创建一个git仓库，通过git管理里面的文件，进行版本控制 
+$ mkdir learngit
+$ cd learngit
+$ git init
+
+4.git初体验 
+仓库目录下创建一个文件 readme.txt   里面写 Hello Git  
+$ git add readme.txt                           （添加这个文件给git）  
+$ git commit -m "wrote a readme file"          （提交这个文件给git， -m 加描述）
+
+
+5. 版本控制的操作  
+刚才的readme.txt (Hello Git)是: 一号版本 
+现在需要变为readme.txt (Hello World)是： 二号版本
