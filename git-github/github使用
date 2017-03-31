@@ -40,6 +40,11 @@
    远程 到 本地 
    $ git clone git@github.com:Nicols-Lsy/gitskills.git
    
+   如果github上作出了修改，而本地没有修改，则本地的提交 会发生冲突  
+   先
+   $ git pull origin   （把最新版的master pull下来 ） 
    
+   
+   未完待续... 目前够用  
    
    
