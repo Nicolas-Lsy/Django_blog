@@ -15,6 +15,7 @@
    --输入完文件夹名称后按斜杠“/”，文件夹的名称就显示为文件夹的样子了。随便输入一个文件名，并在下面文件内容中输入点内容，最后按提交，文件夹就建立了。
 
 2.  Git 和 Github 传输  
+
    第1步：创建SSH Key。
    在/home/(你的用户）/.ssh/目录下，看看有没有.ssh目录，如果有： 
    再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash）
@@ -25,4 +26,20 @@
    第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
    点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。
 
- 3. 
+
+ 3. 远程库 与 本地库的操作 
+ 
+   Github上找到对于项目 复制SSH链接 
+   关联一个远程库
+   $ git remote add origin git@github.com:Nicolas-Lsy/learngit.git
+   远程库的名字就是origin
+   $ git push -u origin master                (推送本地内容） 
+   
+   $ git push origin master                   （之后修改就可一这样提交） 
+   
+   远程 到 本地 
+   $ git clone git@github.com:Nicols-Lsy/gitskills.git
+   
+   
+   
+   
