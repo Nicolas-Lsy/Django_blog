@@ -1,0 +1,125 @@
+
+===================1.设置虚拟环境
+
+
+curl https://bootstrap.pypa.io/get-pip.py | 
+
+$pip3 install virtualenv  (3.5) 
+
+
+$pip install virtualenv  (2.7)
+
+
+创建一个存储所有虚拟环境的目录 ： 
+$mkdir somewhere/virtualenvs 
+
+
+创建虚拟环境：
+$virtualenv virtualenvs/<project-name> 
+
+激活： 
+$ cd  virtualenvs/<project-name>/bin
+$ source activate  
+
+停止使用： 
+deactivate 
+============================安装Django 
+
+pip install django 
+
+django-admin startproject blog 
+
+cd blog 
+
+python manage.py runserver
+
+===========================配置Django后台
+setting.py 中默认数据库是SQLite3 
+其他支持的数据库有： 
+'django.db.backends.mysql'
+'django.db.backends.sqlite3'
+'django.db.backends.oracle'
+'django.db.backends.postgresql_psycopg2'
+
+
+配置数据库后 进行数据库迁移 
+$ python manage.py migrate
+
+
+创建一个超级用户  
+$ python manage.py createsuperuser 
+
+user : lsy 
+password :  helloworld 
+
+
+================================git 提交 版本 
+blog 目录下
+git init 
+
+git add .
+
+不因该将数据库放入其中 
+
+git reset db.sqlite3 
+
+或者： 创建.gitignore 忽略相关文件
+
+内容包括：
+*.pyc
+*.db
+*.sqlite3  
+
+
+git reset .    操作食失误 重置  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
