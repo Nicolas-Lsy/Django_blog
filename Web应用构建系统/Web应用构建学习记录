@@ -1,0 +1,87 @@
+
+
+使用工具：   Gulp   (Grunt类似） 
+
+
+  1.全局安装gulp 
+
+     $ npm install --global gulp
+
+  2.项目的开发依赖安装
+     $ npm install --save-dev gulp 
+     
+  3.项目根目录下创建gulpfile.js 文件：
+  
+  var gulp = require('gulp');
+  
+  gulp.task('default', function(){
+  	//任务代码放置这里 
+  	
+  	});
+  	
+  4. 运行gulp :
+  
+  $ gulp
+  
+  
+  
+  
+  
+  代码(js)质量检测软件： 
+  $ npm install jshint gulp-jshint --save-dev 
+  
+  
+  实例： 
+  var jshint = require('gulp-jshint');
+  var gulp = require('gulp');
+  
+  gulp.task('lint', function(){
+     return gulp.src('./lib/*.js')
+       .pipe(jshint())
+       .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
+  });
+  
+  
+  自动化测试工具 ： 单元测试 、 功能测试 
+  var gulp = require('gulp');
+  var mocha = require('gulp-mocha');
+  
+  gulp.task('default', function(){
+  
+     return gulp.src('test.js', {read: false}
+         
+           .pipe(mocha({reporter: 'nyan'}));
+  }); 
+  
+  
+  编译  
+  
+  动态语言的编译
+  1. CoffeeScript
+  2. Webpack 
+  3. Babel 
+  
+  打包
+  1. DEB。 Debian 软件包格式 .deb 
+  2. RPM （分为源码包、二进制包、Delta包）  二进制包可以直接安装在计算机中。 源代码包src.rpm 后缀 ， 有RPM自动编译安装 
+  3. 压缩文档tar.gz 。 软件的源码，需要编译安装，需要手动安装依赖的软件  
+  
+  
+  
+上传和发布包 
+
+上传之前要创建一个相应的  文件服务器 ， 或是软件源  Ubuntu中的很多软件都是放置在网络服务器上的，这些服务器网站就是“源”，从源可以方便的获取软件包。 
+
+所以： 将打包好的软件 上传到服务器上 。 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
