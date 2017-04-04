@@ -73,9 +73,40 @@ git reset db.sqlite3
 
 git reset .    操作食失误 重置  
 
+==================================创建 BlogpostAPP 过程 
+
+（1）生成APP
+
+django-admin startapp blogpost
+
+目录如下：
+
+ blogpost
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+
+后续具体步骤
+（2）创建Model
+
+    标题
+    作者
+    链接（中文更需要一个好的链接）
+    内容
+    发布日期
+
+注册 Model   blogpost这个APP添加到setting.py中的INSTALLED_APPS字段中
+然后做数据库迁移 
 
 
-
+（3）配置URL
+（4）创建View
+（5）测试 
 
 
 

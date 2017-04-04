@@ -11,4 +11,8 @@ a blog by Django
 
 3. Web 应用构建系统  （build system) 
 
-4. Django框架 基础 
+4. Django框架 基础
+
+5. Django APP 创建 
+
+6. 后台管理 Admin 创建  
