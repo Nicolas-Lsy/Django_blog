@@ -16,3 +16,5 @@ a blog by Django
 5. Django APP 创建 
 
 6. 后台管理 Admin 创建  
+
+7. 数据库 Django模型 
