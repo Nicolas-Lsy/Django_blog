@@ -109,7 +109,12 @@ django-admin startapp blogpost
 （5）测试 
 
 
+----------------------
+表单的操作： 
 
+在templates文件夹下创建 含有表单的 html 
+
+然后在view.py中修改代码将函数和网址对应  。
 
 
 

@@ -27,7 +27,10 @@ model.py
 
 3. 视图+URL 演示     zqxt_tmpl 
 
-4. 数据库 模型 演示   
+4. 数据库 模型 演示  
+
+5. 添加templates文件夹  存放网页 模板 
+ 
 
 
  
