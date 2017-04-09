@@ -30,7 +30,8 @@ model.py
 4. 数据库 模型 演示  
 
 5. 添加templates文件夹  存放网页 模板 
- 
+
+6. 使用django的表单   
 
 
  
