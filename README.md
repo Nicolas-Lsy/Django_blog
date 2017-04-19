@@ -18,3 +18,11 @@ a blog by Django
 6. 后台管理 Admin 创建  
 
 7. 数据库 Django模型 
+
+8. 动态URL 学习 
+
+9. 模板创建 美化界面 
+
+10. Demo 1 ： 轻量级博客 
+
+
